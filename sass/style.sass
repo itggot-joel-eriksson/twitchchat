@@ -1,0 +1,207 @@
+$twitch_purple: #6441A5
+$twitch_light_purple: #B9A3E3
+$twitch_dark_grey: #262626
+$twitch_light_grey: #F1F1F1
+
+$green: #43A047
+$red: #E53935
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600)
+
+html, body
+    width: 100%
+    height: calc(100% - 62px)
+
+body
+    margin: 0
+    padding: 62px 0 0 0
+    background-color: $twitch_dark_grey
+    color: $twitch_light_grey
+    font-family: 'Open Sans', sans-serif
+
+h1
+    font-weight: 300
+    font-size: 64px
+    text-transform: uppercase
+    letter-spacing: 7px
+    text-indent: 7px
+    padding: 0
+    margin: 0
+    line-height: 1
+
+h3
+    font-weight: 300
+    font-size: 32px
+    letter-spacing: 7px
+    text-indent: 7px
+    padding: 0
+    margin: 0
+    line-height: 1
+
+p
+    font-size: 25px
+    font-weight: 300
+    letter-spacing: 3px
+    text-indent: 5px
+    margin: 0
+    padding: 0
+    line-height: 1.5
+
+header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    padding: 10px
+    background-color: $twitch_dark_grey
+    border-bottom: 5px solid $twitch_purple
+    text-align: center
+    z-index: 10
+
+    .online_status
+        position: absolute
+        top: 0
+        left: 0
+        width: 50px
+        height: 50px
+
+    .timeNow
+        position: absolute
+        top: 10px
+        right: 20px
+
+.intro
+    position: relative
+    width: 100%
+    min-height: 100%
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.login-screen
+    width: 90%
+    padding-top: 10px
+    background-color: $twitch_light_purple
+    text-align: center
+    border-radius: 5px
+    overflow: hidden
+    transition: all .2s
+
+    h1, p
+        margin: 10px
+
+.twitch-connect
+    padding: 10px
+    background-color: $twitch_purple
+    cursor: pointer
+    transition: all .2s
+
+    &:hover
+        background-color: darken($twitch_purple, 15)
+
+    p
+        margin: 0
+        text-transform: uppercase
+
+    img
+        width: 25px
+        margin: 0
+        padding: 0
+
+.chat
+    width: 100%
+    height: calc(100% - 18px)
+    display: none
+    overflow: hidden
+
+    .message
+        position: relative
+        width: calc(100% - 20px)
+        padding: 10px
+
+        .system
+            color: #9E9E9E
+
+        .join
+            color: #00FF7F
+
+        .part
+            color: #B22222
+
+        .time
+            color: $twitch_light_grey
+
+        .badge
+            height: 18px
+            vertical-align: middle
+
+        p
+            font-size: 16px
+            vertical-align: middle
+
+        .deleted
+            color: lighten($twitch_purple, 15)
+
+        .emoticon
+            height: 18px
+            vertical-align: middle
+
+        .mentioning
+            padding: 2px
+            background-color: #DEDEDE
+            color: #32323E
+
+.sendMessage
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 75px
+    border-top: 5px solid $twitch_purple
+    display: flex
+    align-content: stretch
+    overflow: hidden
+
+    &.hidden
+        display: none
+
+    .inputArea
+        width: 100%
+        background-color: $twitch_dark_grey
+        color: $twitch_light_grey
+        border: none
+        font-family: 'Open sans', sans-serif
+        font-size: 16px
+        font-weight: 300
+        letter-spacing: 3px
+        text-indent: 5px
+        margin: 0
+        padding: 3px
+        line-height: 1.5
+        overflow: auto
+        outline: none
+        resize: none
+        transition: background-color .2s
+
+        &:focus
+            background-color: darken($twitch_dark_grey, 5)
+
+    .sendButton
+        width: 100px
+        padding: 40px 10px
+        background-color: darken($twitch_purple, 15)
+        color: $twitch_light_grey
+        font-size: 16px
+        text-align: center
+        align-self: center
+        transition: background-color .2s
+        cursor: pointer
+
+        &:hover
+            background-color: darken($twitch_purple, 20)
+
+@media (min-width: 1700px)
+    .login-screen
+        width: 50%

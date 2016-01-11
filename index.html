@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Twitch chat</title>
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="js/jquery.min.js"></script>
+        <script src="//ttv-api.s3.amazonaws.com/twitch.min.js"></script>
+        <script src="//cdn.tmijs.org/js/0.0.24/tmi.js"></script>
+        <script src="js/moment.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/grid.css">
+    </head>
+    <body>
+        <header>
+            <h3 class="channel"></h3>
+            <h3 class="timeNow"></h3>
+        </header>
+
+        <div class="intro animated">
+            <div class="login-screen">
+                <h1>
+                    Sign in to Twitch
+                </h1>
+                <p>
+                    To be able to chat you need to connect with Twitch
+                </p>
+                <div class="twitch-connect">
+                    <p>
+                        Connect with Twitch
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat"></div>
+
+        <footer class="sendMessage hidden animated">
+            <textarea class="inputArea" placeholder="Send a message"></textarea>
+            <p class="sendButton">Chat</p>
+        </footer>
+    </body>
+</html>
