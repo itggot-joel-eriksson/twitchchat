@@ -129,7 +129,7 @@ $(document).ready(function() {
 
     $(".twitch-connect").on("click", function(event) {
         Twitch.login({
-            redirect_uri: "https://joel.f-eri.cf/twitchchat/",
+            redirect_uri: "https://joel.f-eri.me/twitchchat/",
             scope: ["user_read", "chat_login"]
         });
     });
